@@ -1,0 +1,113 @@
+2018-10-15 12:19:34,823 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2018-10-15 12:19:34,853 INFO o.a.j.JMeter: Loading user properties from: /usr/local/Cellar/jmeter/5.0/libexec/bin/user.properties
+2018-10-15 12:19:34,854 INFO o.a.j.JMeter: Loading system properties from: /usr/local/Cellar/jmeter/5.0/libexec/bin/system.properties
+2018-10-15 12:19:34,860 INFO o.a.j.JMeter: Copyright (c) 1998-2018 The Apache Software Foundation
+2018-10-15 12:19:34,861 INFO o.a.j.JMeter: Version 5.0 r1840935
+2018-10-15 12:19:34,861 INFO o.a.j.JMeter: java.version=1.8.0_161
+2018-10-15 12:19:34,861 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2018-10-15 12:19:34,861 INFO o.a.j.JMeter: os.name=Mac OS X
+2018-10-15 12:19:34,861 INFO o.a.j.JMeter: os.arch=x86_64
+2018-10-15 12:19:34,861 INFO o.a.j.JMeter: os.version=10.13.6
+2018-10-15 12:19:34,861 INFO o.a.j.JMeter: file.encoding=UTF-8
+2018-10-15 12:19:34,861 INFO o.a.j.JMeter: Max memory     =1073741824
+2018-10-15 12:19:34,861 INFO o.a.j.JMeter: Available Processors =8
+2018-10-15 12:19:34,866 INFO o.a.j.JMeter: Default Locale=English (EN)
+2018-10-15 12:19:34,867 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2018-10-15 12:19:34,867 INFO o.a.j.JMeter: JMeterHome=/usr/local/Cellar/jmeter/5.0/libexec
+2018-10-15 12:19:34,867 INFO o.a.j.JMeter: user.dir  =/Users/tank/work/other/angular/test/my-app/src/app/components
+2018-10-15 12:19:34,867 INFO o.a.j.JMeter: PWD       =/Users/tank/work/other/angular/test/my-app/src/app/components
+2018-10-15 12:19:34,869 INFO o.a.j.JMeter: IP: 10.223.143.1 Name: Ajaykumars-MacBook-Pro.local FullName: 10.223.143.1
+2018-10-15 12:19:37,315 INFO o.a.j.g.a.LookAndFeelCommand: Installing Darcula LAF
+2018-10-15 12:19:37,334 INFO o.a.j.g.a.LookAndFeelCommand: Using look and feel: com.bulenkov.darcula.DarculaLaf [Darcula]
+2018-10-15 12:19:37,334 INFO o.a.j.JMeter: Setting LAF to: com.bulenkov.darcula.DarculaLaf
+2018-10-15 12:19:37,432 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2018-10-15 12:19:37,925 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2018-10-15 12:19:37,925 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2018-10-15 12:19:39,430 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-10-15 12:19:39,431 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-10-15 12:19:39,431 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-10-15 12:19:39,431 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-10-15 12:19:39,431 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2018-10-15 12:19:39,431 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2018-10-15 12:19:39,760 INFO o.a.j.e.KeyToolUtils: keytool found at 'keytool'
+2018-10-15 12:19:39,761 INFO o.a.j.p.h.p.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file /usr/local/Cellar/jmeter/5.0/libexec/bin/proxyserver.jks
+2018-10-15 12:19:39,884 INFO o.a.j.s.FileServer: Default base='/Users/tank/work/other/angular/test/my-app/src/app/components'
+2018-10-15 12:19:40,177 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2018-10-15 12:19:40,177 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2018-10-15 12:19:40,178 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2018-10-15 12:19:40,178 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2018-10-15 17:15:50,125 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2018-10-15 17:15:50,127 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2018-10-15 17:15:50,127 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2018-10-15 17:15:50,130 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2018-10-15 17:15:50,468 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2018-10-15 17:15:50,469 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group.
+2018-10-15 17:15:50,469 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-10-15 17:15:50,469 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2018-10-15 17:15:50,473 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2018-10-15 17:15:50,474 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2018-10-15 17:15:50,475 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2018-10-15 17:15:50,493 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = Ajaykumars-MacBook-Pro.local
+2018-10-15 17:15:50,503 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2018-10-15 17:16:15,842 INFO o.a.j.g.a.Start: Stopping test
+2018-10-15 17:16:15,860 INFO o.a.j.t.JMeterThread: Stopping: Thread Group 1-1
+2018-10-15 17:16:15,861 WARN o.a.j.t.JMeterThread: Interrupting: Thread Group 1-1 sampler: HTTP Request
+2018-10-15 17:16:15,865 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2018-10-15 17:16:15,865 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2018-10-15 17:16:15,865 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2018-10-15 17:16:15,866 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2018-10-15 17:16:38,730 INFO o.a.j.s.FileServer: Set new base='/Users/tank/work'
+2018-10-15 17:16:38,866 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2018-10-15 17:16:38,879 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2018-10-15 17:16:38,881 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2018-10-15 17:16:38,909 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2018-10-15 17:16:38,909 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2018-10-15 17:16:38,911 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2018-10-15 17:16:39,047 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2018-10-15 17:16:39,048 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group.
+2018-10-15 17:16:39,048 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-10-15 17:16:39,048 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2018-10-15 17:16:39,049 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2018-10-15 17:16:39,050 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2018-10-15 17:16:39,051 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2018-10-15 17:16:40,635 INFO o.a.j.g.a.Start: Stopping test
+2018-10-15 17:16:40,653 INFO o.a.j.t.JMeterThread: Stopping: Thread Group 1-1
+2018-10-15 17:16:40,654 WARN o.a.j.t.JMeterThread: Interrupting: Thread Group 1-1 sampler: HTTP Request
+2018-10-15 17:16:40,656 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2018-10-15 17:16:40,656 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2018-10-15 17:16:40,656 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2018-10-15 17:16:40,656 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2018-10-15 17:16:42,549 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2018-10-15 17:16:42,550 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2018-10-15 17:16:42,552 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2018-10-15 17:16:42,658 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2018-10-15 17:16:42,659 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group.
+2018-10-15 17:16:42,659 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-10-15 17:16:42,659 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2018-10-15 17:16:42,660 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2018-10-15 17:16:42,660 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2018-10-15 17:16:42,661 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2018-10-15 17:16:55,567 INFO o.a.j.g.a.Start: Stopping test
+2018-10-15 17:16:55,586 INFO o.a.j.t.JMeterThread: Stopping: Thread Group 1-1
+2018-10-15 17:16:55,586 WARN o.a.j.t.JMeterThread: Interrupting: Thread Group 1-1 sampler: HTTP Request
+2018-10-15 17:16:55,587 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2018-10-15 17:16:55,587 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2018-10-15 17:16:55,588 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2018-10-15 17:16:55,588 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2018-10-15 17:16:58,142 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2018-10-15 17:16:58,142 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2018-10-15 17:16:58,144 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2018-10-15 17:16:58,248 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2018-10-15 17:16:58,248 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group.
+2018-10-15 17:16:58,248 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-10-15 17:16:58,248 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2018-10-15 17:16:58,249 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2018-10-15 17:16:58,249 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2018-10-15 17:16:58,249 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2018-10-15 17:17:00,040 INFO o.a.j.g.a.Start: Stopping test
+2018-10-15 17:17:00,056 INFO o.a.j.t.JMeterThread: Stopping: Thread Group 1-1
+2018-10-15 17:17:00,057 WARN o.a.j.t.JMeterThread: Interrupting: Thread Group 1-1 sampler: HTTP Request
+2018-10-15 17:17:00,058 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2018-10-15 17:17:00,059 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2018-10-15 17:17:00,059 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2018-10-15 17:17:00,059 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
