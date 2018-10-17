@@ -9,8 +9,10 @@ import { map } from 'rxjs/operators';
 })
 
 export class GridComponent {
-  url= 'http://localhost:8080/game/5bc4efcedb54705d6c158588';
-  postUrl = 'http://localhost:8080/game/5bc4efcedb54705d6c158588';
+  getGameUrl= 'http://localhost:8080/game/';
+  postGameUrl = 'http://localhost:8080/game/';
+  getPlayGameUrl = 'http://localhost:8080/player/playGame/';
+  gameId = '';
   data : any = {};
   grid = [];
   char = 'X';
@@ -18,17 +20,8 @@ export class GridComponent {
   playerOrder = 1;
   
   constructor(private http:Http) {
-    //this.getContacts(); 
-    setInterval(()=> {this.getContacts()},500);
+    
     console.log(this.data);
-  }
-
-  clickButton(){
-  	console.log("this.data");
-  	console.log(this.data);
-  	console.log(this.url);
-    //this.getContacts();
-
   }
 
   getContacts(){
@@ -52,7 +45,8 @@ export class GridComponent {
   }				
 
   getData(){
-  	return this.http.get(this.url).pipe(map(resp => {
+    let url = this.getGameUrl + this.gameId;
+  	return this.http.get(url).pipe(map(resp => {
   		 return resp.json();
   	}));
   }
@@ -69,7 +63,8 @@ export class GridComponent {
       "state": newState
     };
 
-    this.http.put(this.postUrl, payload).subscribe(res => console.log(res.json()));
+    let url = this.postGameUrl + this.gameId;
+    this.http.put(url, payload).subscribe(res => console.log(res.json()));
   }
 
   gridToString(grid){
@@ -82,14 +77,33 @@ export class GridComponent {
     return p;
   }
 
-  setPlayerId(playerId){
+  startGame(playerId){
     this.playerId = playerId;
+    console.log(playerId);
+    let url = this.getPlayGameUrl + playerId;
+    this.http.get(url).subscribe(res => {
+      let response = res.json();
+      console.log(response);
+      this.gameId = response.gameId;
+      this.getContacts(); 
+      //setInterval(()=> {this.getContacts()},500);
+    });
+
     if(this.playerOrder === 1){
       this.char = 'X';
     }else {
       this.char = 'O';
     }
     console.log(playerId);
+  }
+
+  startNewGame(){
+    let payload = {
+      "state": "         "
+    };
+
+    let url = this.postGameUrl + this.gameId;
+    this.http.put(url, payload).subscribe(res => console.log(res.json()));
   }
 
 }

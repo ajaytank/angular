@@ -1,8 +1,8 @@
 <div class="container-fluid">
-	<button (click)='clickButton()'>click me</button>>
 	<input #abc placeholder="name" /> 
 	<h1>Welcome {{name}}</h1>
-	<button (click)='setPlayerId(abc.value)'>player id</button>
+	<button (click)='startGame(abc.value)'>Start Game</button>
+	<button (click)='startNewGame()'>New Game</button>
 	  <div *ngFor="let items of grid; let i = index" class="row">
 	  	<div class="cell col-sm-4 mt-0 mb-1" *ngFor="let item of items; let j = index" (click)='updateGame(i,j)'>
 	  		<h1 class="text">{{item}}</h1>
