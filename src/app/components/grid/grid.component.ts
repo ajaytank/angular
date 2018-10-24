@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Http,Response} from '@angular/http';
 import { map } from 'rxjs/operators';
+import { MyserviceService } from '../../myservice.service';
 
 @Component({
   selector: 'app-grid',
@@ -18,10 +19,38 @@ export class GridComponent {
   char = 'X';
   playerId = "";
   playerOrder = 1;
+  loggedIn = false;
+  activePlayer = 1;
+  result = null;
   
-  constructor(private http:Http) {
+  constructor(private http:Http,private myservice: MyserviceService) {
     
-    console.log(this.data);
+  }
+
+  loginUrl = "http://localhost:8080/player/login/"
+
+  login(username,password){
+    console.log(username,password);
+    var url = this.loginUrl + username + ":" + password;
+    this.http.get(url).pipe(map(res => 
+      {
+        console.log(res.json());
+        return res.json(); 
+      }
+    )).subscribe(res => {
+      if(res){
+        this.loggedIn = true;
+        this.playerId = res.id;
+        this.gameId = res.gameId;
+        this.startGame(this.playerId)
+      }else{
+        this.loggedIn = false;
+      }
+    });
+  }
+
+  newGame(){
+    this.startGame(this.playerId);
   }
 
   getContacts(){
@@ -35,11 +64,19 @@ export class GridComponent {
   		this.grid[2] = arr.splice(0,3);
   		console.log(this.grid);
 
-      if(this.data.playerOneId === name){
+      if(this.data.playerOneId === this.playerId){
         this.playerOrder = 1;
+        this.char = 'X';
       }else {
         this.playerOrder = 2;
+        this.char = 'O';
       }
+
+      this.activePlayer = data.activePlayer;
+      console.log(data.result);
+      
+        this.result = data.result;
+      
 
   	});
   }				
@@ -56,15 +93,22 @@ export class GridComponent {
     if(this.grid[i][j] === this.char) {
       return;
     }
-    this.grid[i][j] = this.char;
-    let newState = this.gridToString(this.grid);
 
-    let payload = {
-      "state": newState
-    };
+    if(this.result != null){
+      return;
+    }
 
-    let url = this.postGameUrl + this.gameId;
-    this.http.put(url, payload).subscribe(res => console.log(res.json()));
+    if(this.activePlayer === this.playerOrder) {
+      this.grid[i][j] = this.char;
+      let newState = this.gridToString(this.grid);
+
+      let payload = {
+        "state": newState
+      };
+
+      let url = this.postGameUrl + this.gameId;
+      this.http.put(url, payload).subscribe(res => console.log(res.json()));
+    }
   }
 
   gridToString(grid){
@@ -78,6 +122,7 @@ export class GridComponent {
   }
 
   startGame(playerId){
+    this.result = null;
     this.playerId = playerId;
     console.log(playerId);
     let url = this.getPlayGameUrl + playerId;
@@ -85,8 +130,8 @@ export class GridComponent {
       let response = res.json();
       console.log(response);
       this.gameId = response.gameId;
-      this.getContacts(); 
-      //setInterval(()=> {this.getContacts()},500);
+      //this.getContacts(); 
+      setInterval(()=> {this.getContacts()},500);
     });
 
     if(this.playerOrder === 1){
@@ -95,15 +140,6 @@ export class GridComponent {
       this.char = 'O';
     }
     console.log(playerId);
-  }
-
-  startNewGame(){
-    let payload = {
-      "state": "         "
-    };
-
-    let url = this.postGameUrl + this.gameId;
-    this.http.put(url, payload).subscribe(res => console.log(res.json()));
   }
 
 }

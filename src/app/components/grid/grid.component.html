@@ -1,11 +1,19 @@
-<div class="container-fluid">
-	<input #abc placeholder="name" /> 
-	<h1>Welcome {{name}}</h1>
-	<button (click)='startGame(abc.value)'>Start Game</button>
-	<button (click)='startNewGame()'>New Game</button>
-	  <div *ngFor="let items of grid; let i = index" class="row">
-	  	<div class="cell col-sm-4 mt-0 mb-1" *ngFor="let item of items; let j = index" (click)='updateGame(i,j)'>
-	  		<h1 class="text">{{item}}</h1>
-	  	</div>
-	  </div>
+<div>
+	<input #username type="text" name="">
+	<input #password type="password" name="">
+	<button (click)="login(username.value,password.value)">Login</button>
+	<h1 *ngIf="username.value && loggedIn">Welcome {{username.value}}</h1>
+</div>
+
+<div *ngIf="loggedIn" class="container-fluid">
+	
+	<h3 *ngIf="playerOrder==activePlayer">Your turn</h3>
+	<h3 *ngIf="playerOrder!=activePlayer">Waiting for oponent's move</h3>
+	<div *ngFor="let items of grid; let i = index" class="row">
+		<div class="cell col-sm-4 mt-0 mb-1" *ngFor="let item of items; let j = index" (click)='updateGame(i,j)'>
+			<h1 class="text">{{item}}</h1>
+		</div>
+	</div>
+	<h3 *ngIf="result">{{result}}</h3>
+	<button *ngIf="result" (click)="newGame()">Play New Game</button>
 </div>
