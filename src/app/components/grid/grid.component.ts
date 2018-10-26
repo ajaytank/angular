@@ -10,7 +10,8 @@ import { MyserviceService } from '../../myservice.service';
 })
 
 export class GridComponent {
-  host = 'http://localhost:8080';
+  //host = 'http://localhost:8080';
+  host = 'http://13.232.148.135:8081';
   getGameUrl= this.host + '/game/';
   postGameUrl = this.host + '/game/';
   getPlayGameUrl = this.host + '/player/playGame/';
