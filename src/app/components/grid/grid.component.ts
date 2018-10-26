@@ -10,9 +10,10 @@ import { MyserviceService } from '../../myservice.service';
 })
 
 export class GridComponent {
-  getGameUrl= 'http://localhost:8080/game/';
-  postGameUrl = 'http://localhost:8080/game/';
-  getPlayGameUrl = 'http://localhost:8080/player/playGame/';
+  host = 'http://localhost:8080';
+  getGameUrl= this.host + '/game/';
+  postGameUrl = this.host + '/game/';
+  getPlayGameUrl = this.host + '/player/playGame/';
   gameId = '';
   data : any = {};
   grid = [];
@@ -27,7 +28,7 @@ export class GridComponent {
     
   }
 
-  loginUrl = "http://localhost:8080/player/login/"
+  loginUrl = this.host + "/player/login/"
 
   login(username,password){
     console.log(username,password);
